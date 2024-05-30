@@ -35,7 +35,6 @@ background.innerHTML = `
 	</div>
 `
 
-
 const hideHero = () =>{
 	hero.classList.add('hide');
 }

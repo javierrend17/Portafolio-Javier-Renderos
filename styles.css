@@ -72,11 +72,11 @@ html{
 @keyframes movementX{
 	0%
 	{
-		transform: translateX(-1vw);
+		left: -10px;
 	}
 	100%
 	{
-		transform: translateX(101vw);
+		left: calc(100vw + 10px);
 		
 	}
 }
@@ -218,6 +218,7 @@ body{
 	align-items: center;
 	justify-content: center;
 	font-size: 32px;
+	padding: 0px 30px;
 }
 
 .top span{
@@ -237,7 +238,7 @@ body{
 
 .top .lastName{
 	width: 0px;
-	line-height: 1.;
+	line-height: 1.5;
 	white-space: nowrap;
 	margin-left: 8px;
 	overflow: hidden;
