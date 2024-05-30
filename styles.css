@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* 
+	font-family: "JetBrains Mono", monospace;
+	font-family: "Roboto", sans-serif;
+*/
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "JetBrains Mono", monospace;
+	font-weight: 900;
+	letter-spacing: -2px;
+	
+}
+
+html{
+	scroll-behavior: smooth;
+	-webkit-scroll-behavior: smooth;
+}
+
+/*============================= Live Backgound ===============================*/
+
+.background{
+	background-image: url('./resources/wallpaper.png');
+	background-size: cover;
+	background-position: center;
+	position: fixed;
+	height: 100vh;
+	width: 100vw;
+	top: 0px;
+	left: 0px;
+	z-index: -400;
+}
+
+.particles-container{
+	width: 100vw;
+	height: 100%;
+	position: absolute;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	top: 45%;
+}
+
+.particle-box{
+	width: 10px;
+	height: 10px;
+	position: relative;
+	display: flex;
+}
+
+.particle{
+	width: 0px;
+	height: 3px;
+	background-color: rgb(255, 255, 255);
+	border-radius: 5px;
+	box-shadow: 0px 0px 0px 0px white;
+	animation: movementX calc(var(--i) * 2s) linear infinite, glow calc(var(--i) * 50ms) infinite alternate ;
+	position: fixed;
+}
+
+@keyframes glow{
+	to 
+	{
+		width: 4px;
+		box-shadow: 0px 0px 20px 0.2px white;
+	}
+}
+
+@keyframes movementX{
+	0%
+	{
+		transform: translateX(-1vw);
+	}
+	100%
+	{
+		transform: translateX(101vw);
+		
+	}
+}
+
+/* ============================ Body ============================ */
+
+
+body{
+	max-width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: rgb(255, 255, 255);
+	
+}
+
+.backgound{
+	
+	width: 100vw;
+	height: 100%;
+	z-index: -300;
+	position: fixed;
+	top: 0px;
+}
+
+/* ========================= Header ========================== */
+
+.header{
+	width: 50px;
+	margin: 0px 15px;
+	height: 50px;
+	background-color: rgba(255, 255, 255, 0.178);
+	border-radius: 10px;
+	top: 13px;
+	right: 13px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	box-sizing: border-box;
+	z-index: 300;
+	transition: ease 0.5s;
+	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.03);
+}
+
+.navIcon{
+	
+	width: 40px;
+	height: 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 6px;
+}
+
+.navIcon div{
+	width: 28px;
+	height: 4px;
+	background-color: white;
+	border-radius: 3px;
+}
+
+.glass-effect{
+	backdrop-filter: blur(20px);
+	-webkit-backdrop-filter: blur(20px);
+}
+
+.openHeader{
+	height: 500px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========================= Hero ========================== */
+
+.hero{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+	transition: ease 0.4s;
+}
+
+
+.profilePhoto{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 30px;
+	animation: ease 1s;
+	transition: opacity 1s ease;
+}
+
+.profilePhoto img{
+	width: 150px;
+	height: 150px;
+	object-fit: cover;
+	border-radius: 80px;
+	animation: ease 1s;
+}
+
+.titleContainer{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	gap: 10px;
+	min-width: 20%;
+	padding-bottom: 90px;
+	text-shadow: 0px 3px 10px rgba(0, 0, 0, 0.257);
+}
+
+.titleContainer .effect{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 10px;
+	height: 100px;
+}
+
+.top{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	font-size: 32px;
+}
+
+.top span{
+	color: rgb(214, 123, 123);
+}
+
+.top .firstName{
+	display: flex;
+	white-space: nowrap;
+	line-height: 1.5;
+	width: 282px;
+	overflow: hidden;
+	border-right: 5px solid rgba(255, 255, 255, 0);
+	animation: blink 0.9s steps(2) 1, typeEffect 2s steps(16);
+	animation-duration: 0.9s;
+}
+
+.top .lastName{
+	width: 0px;
+	line-height: 1.;
+	white-space: nowrap;
+	margin-left: 8px;
+	overflow: hidden;
+	border-right: 5px solid rgba(255, 255, 255, 0);
+	animation: blink 0.9s steps(2) infinite, typeEffect2 2s steps(12) forwards;
+  animation-delay: 0.9s, 0.9s;
+	animation-duration: 0.9s;
+}
+
+.bottom{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.bottom .job{
+	opacity: 0;
+	font-size: 0px;
+	animation: showJob 0.5s ease forwards;
+	animation-delay: 2s;
+	color: rgb(87, 177, 233);
+}
+
+.job span{
+	color: rgb(183, 174, 42);
+}
+
+.menu-button{
+  align-items: center;
+  background-color: #ffffff00;
+  border: 2px solid rgba(255, 255, 255, 0.424);
+	border-radius: 10px;
+  color: #ffffffc4;
+  cursor: pointer;
+  display: flex;
+  font-family: "roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  height: 55px;
+  justify-content: center;
+  letter-spacing: 1px;
+  line-height: 24px;
+  min-width: 140px;
+  outline: 0;
+  padding: 0 17px;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.menu-button:hover{
+	border: 2px solid rgba(242, 213, 255, 0.658);
+	color: rgb(247, 235, 255);
+	text-shadow: 0px 0px 20px rgb(243, 216, 255);
+}
+
+@keyframes blink{
+	to {border-right: 5px solid}
+}
+
+@keyframes typeEffect{
+	from {width: 0px}
+}
+
+@keyframes typeEffect2{
+	to {width: 213px}
+}
+
+@keyframes showJob{
+	to {opacity: 1}
+	to {font-size: 23px}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0.5;
+		transform: scale(0.95);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.proyects{
+	background-color: rgba(0, 0, 0, 0.031);
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 60px;
+	align-items: center;
+	position: absolute;
+	transition: ease 0.4s;
+}
+
+.hide{
+	opacity: 0;
+	z-index: -500;
+}
