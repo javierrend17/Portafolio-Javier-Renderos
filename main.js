@@ -2,7 +2,8 @@ const background = document.querySelector('.background')
 const hero = document.querySelector('.hero')
 const proyectsButton = document.querySelector('.proyects-button')
 const backButton = document.querySelector('.back-button')
-const proyects = document.querySelector('.proyects')
+const proyects = document.querySelectorAll('.proyect-card')
+const contentBox = document.querySelector('.content')
 
 background.innerHTML = `
 	<div class="particles-container">
@@ -38,12 +39,24 @@ const hideHero = () =>{
 }
 const showHero = () =>{
 	hero.classList.remove('hide');
+	backButton.classList.add('hide')
+	contentBox.classList.add('hero-mode')
 }
-const hideProyects = () =>{
-	proyects.classList.add('hide')
+
+const showProyects = () => {
+	contentBox.classList.remove('hero-mode')
+	proyects.forEach((proyect, index) => {
+		setTimeout(() => {
+			proyect.classList.remove('hide')
+		}, 100 * index)
+	});
+	backButton.classList.remove('hide')
 }
-const showProyects = () =>{
-	proyects.classList.remove('hide')
+
+const hideProyects = () => {
+	proyects.forEach((proyect, index) => {
+		proyect.classList.add('hide')
+	})
 }
 
 proyectsButton.addEventListener('click', () => {
@@ -52,7 +65,14 @@ proyectsButton.addEventListener('click', () => {
 })
 
 backButton.addEventListener('click', () => {
-	hideProyects()
+	contentBox.scrollTo({
+		top: 0
+	});
 	showHero()
+	hideProyects()
 })
 
+
+document.addEventListener('DOMContentLoaded', () =>{
+	showHero()
+})

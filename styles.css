@@ -12,6 +12,7 @@
 	padding: 0;
 	font-family: "JetBrains Mono", monospace;
 	font-weight: 900;
+	transition: opacity 0.5s ease, transform 0.2s ease;
 }
 
 ::-webkit-scrollbar {
@@ -102,39 +103,45 @@ html{
 
 body{
 	max-width: 100%;
+	height: 100vh;
+	max-height: 100vh;
+	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	color: rgb(255, 255, 255);
-	
+	transition: none;
 }
 
 .content{
 	width: 100%;
 	min-width: 100vw;
-	height: 100vh;
+	height: 100%;
 	overflow-x: hidden;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-	padding: 50px 0px;
+	padding: 20px 0px;
 	gap: 30px;
+	overflow-y: scroll;
+	transition: none;
+	position: absolute;
 }
 
 /* ========================= Hero ========================== */
 
 .hero{
 	width: 100%;
-	height: 100vh;
+	height: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	gap: 5px;
-	transition: ease 0.4s;
+	position: absolute;
 }
 
 
@@ -144,7 +151,6 @@ body{
 	align-items: center;
 	padding-bottom: 30px;
 	animation: ease 1s;
-	transition: opacity 1s ease;
 }
 
 .profilePhoto img{
@@ -152,7 +158,6 @@ body{
 	height: 150px;
 	object-fit: cover;
 	border-radius: 80px;
-	animation: ease 1s;
 }
 
 .titleContainer{
@@ -191,23 +196,25 @@ body{
 	display: flex;
 	white-space: nowrap;
 	line-height: 1.5;
-	width: 282px;
+	width: 307px;
 	overflow: hidden;
-	border-right: 5px solid rgba(255, 255, 255, 0);
-	animation: blink 0.9s steps(2) 1, typeEffect 2s steps(16);
+	border-right: 0px solid rgba(255, 255, 255, 0);
+	animation: blink 0.9s steps(2) 1, typeEffect 0.9s steps(16), showBorder 0.9;
 	animation-duration: 0.9s;
+	box-sizing: content-box;
 }
 
 .top .lastName{
 	width: 0px;
 	line-height: 1.5;
 	white-space: nowrap;
-	margin-left: 8px;
+	margin-left: 18px;
 	overflow: hidden;
 	border-right: 5px solid rgba(255, 255, 255, 0);
 	animation: blink 0.9s steps(2) infinite, typeEffect2 2s steps(12) forwards;
   animation-delay: 0.9s, 0.9s;
 	animation-duration: 0.9s;
+	box-sizing: content-box;
 }
 
 .bottom{
@@ -262,6 +269,10 @@ body{
 	to {border-right: 5px solid}
 }
 
+@keyframes showBorder{
+	to {border-right: 5px solid rgba(255, 255, 255, 0);}
+}
+
 @keyframes typeEffect{
 	from {width: 0px}
 }
@@ -296,13 +307,9 @@ body{
 	gap: 60px;
 	align-items: center;
 	position: absolute;
-	transition: ease 0.4s;
 }
 
-.hide{
-	display: none;
-	z-index: -500;
-}
+
 
 /* ==================== Card styles ====================== */
 
@@ -321,7 +328,6 @@ body{
 	user-select: none;
 	backdrop-filter: blur(5px);
 	box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.26);
-	
 }
 
 
@@ -438,7 +444,6 @@ img.javascript{
 	letter-spacing: -0.1px;
 	border: none;
 	cursor: pointer;
-	transition: ease 0.2s;
 }
 
 .buttons .probar{
@@ -475,8 +480,22 @@ img.javascript{
 		margin: 0;
 	}
 
-	.buttons .probar{
+	.buttons .probar,
+	.buttons .probar:hover{
 		width: 100%;
 		margin-top: 20px;
 	}
+
+	
+}
+
+
+.hide{
+	opacity: 0;
+	transform: scale(0.8);
+	z-index: -5000;
+}
+
+.hero-mode{
+	overflow-y: hidden;
 }
