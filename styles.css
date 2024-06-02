@@ -129,7 +129,8 @@ body{
 	gap: 30px;
 	overflow-y: scroll;
 	transition: none;
-	position: absolute;
+	position: fixed;
+	top: 0;
 }
 
 /* ========================= Hero ========================== */
