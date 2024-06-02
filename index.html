@@ -8,41 +8,100 @@
 </head>
 <body>
 	<div class="background"></div>
-	<div class="header animate glass-effect">
-		<div class="navBar">
-			<div class="navIcon">
-				<div></div>
-				<div></div>
-				<div></div>
+	<div class="content">
+		<!-- Juego de memorias -->
+		<div class="proyect-card">
+			<img class="card-img" draggable="false" src="/resources/memory.png">
+			<div class="description">
+				<h2>Juego de memoria</h2>
+				<p>Mi primer videojuego hecho con un diceño visualmente agradable y adaptado para dispositivos móviles.</p>
+			</div>
+			<h3>Tecnologías:</h3>
+			<div class="card-tecnologies">
+				<div class="tecnology"><img draggable="false" class="javascript" src="https://symbols.getvecta.com/stencil_25/41_javascript.0ca26ec4ab.svg" alt=" javascript logo"></div>
+				
+				<div class="tecnology">
+					<img class="html" draggable="false" src="https://cdn.iconscout.com/icon/free/png-256/free-html-5-1-1175208.png" alt="html logo">
+				</div>
+				
+				<div class="tecnology">
+					<img class="css" draggable="false" src="https://cdn.iconscout.com/icon/free/png-256/free-css3-9-1175237.png?f=webp" alt="css logo">
+				</div>
+				<!-- <div class="tecnology">
+					<img class="react" draggable="false" src="https://symbols.getvecta.com/stencil_25/72_react.76a8d36b4b.svg" alt="react logo">
+				</div>
+				<div class="tecnology">
+					<img class="php" draggable="false" src="https://cdn-icons-png.flaticon.com/512/5968/5968332.png" alt="php logo">
+				</div>
+				<div class="tecnology">
+					<img class="vite" draggable="false" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Vitejs-logo.svg/1039px-Vitejs-logo.svg.png" alt="vite logo">
+				</div> -->
+			</div>
+			<div class="buttons">
+				<a class="probar" href="https://memorygamejavier.netlify.app/">Probar</a>
+				<a href="https://github.com/javierrend17/Memory-Game">Ver repositorio<img draggable="false" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="github logo"></a>
 			</div>
 		</div>
-	</div>
+		
+		<!-- Carrusel de cartas -->
+		
+		<div class="proyect-card">
+			<img class="card-img" draggable="false" src="/resources/carrusel.png">
+			<div class="description">
+				<h2>Carrusel de cartas</h2>
+				<div>
+					<p>Un carrusel de cartas responsive hecho con ReactJS y Vite.</p>
+				</div>
+			</div>
+			<h3>Tecnologías:</h3>
+			<div class="card-tecnologies">
+				<div class="tecnology">
+					<img class="html" draggable="false" src="https://cdn.iconscout.com/icon/free/png-256/free-html-5-1-1175208.png" alt="html logo">
+				</div>
+				
+				<div class="tecnology">
+					<img class="css" draggable="false" src="https://cdn.iconscout.com/icon/free/png-256/free-css3-9-1175237.png?f=webp" alt="css logo">
+				</div>
+				<div class="tecnology">
+					<img class="react" draggable="false" src="https://symbols.getvecta.com/stencil_25/72_react.76a8d36b4b.svg" alt="react logo">
+				</div>
+				<div class="tecnology">
+					<img class="vite" draggable="false" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Vitejs-logo.svg/1039px-Vitejs-logo.svg.png" alt="vite logo">
+				</div>
+			</div>
+			
+			<div class="buttons">
+				<a class="probar" href="https://carruselcartasjavier.netlify.app/">Probar</a>
+				<a href="https://github.com/javierrend17/CarruselCartas-React">Ver repositorio<img draggable="false" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="github logo"></a>
+			</div>
+		</div>
+		
+		<div class="hero hide">
 
-	<div class="hero">
-
-		<div class="profilePhoto animate">
-			<img src="resources/20220812_100610.jpg" alt="">
+			<div class="profilePhoto animate">
+				<img src="resources/20220812_100610.webp" alt="">
+			</div>
+		
+			<div class="titleContainer">
+				<div class="effect">
+					<div class="top animate">
+						<p class="firstName">&lt;<span>p</span> &gt;Javier Ulises</p>
+						<p class="lastName">Renderos&lt;/<span>p</span>&gt;</p>
+					</div>
+					<div class="bottom">
+						<p class="job">fullStackDeveloper<span>()</span></p>
+					</div>
+				</div>
+			</div>
+	
+			<button class="proyects-button menu-button">Mis proyectos</button>
+	
 		</div>
 	
-		<div class="titleContainer">
-			<div class="effect">
-				<div class="top animate">
-					<p class="firstName">&lt;<span>p</span> &gt;Javier Ulises</p>
-					<p class="lastName">Renderos&lt;/<span>p</span>&gt;</p>
-				</div>
-				<div class="bottom">
-					<p class="job">fullStackDeveloper<span>()</span></p>
-				</div>
-			</div>
+		<div class="proyects animate glass-effect hide">
+			Esta seccion contendrá información
+			<button class="back-button menu-button">Volver</button>
 		</div>
-
-		<button class="proyects-button menu-button">Mis proyectos</button>
-
-	</div>
-
-	<div class="proyects animate glass-effect hide">
-		Esta seccion contendrá información
-		<button class="back-button menu-button">Volver</button>
 	</div>
 
 	<script src="main.js"></script>

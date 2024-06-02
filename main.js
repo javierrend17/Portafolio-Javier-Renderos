@@ -1,5 +1,3 @@
-const navBarIcon = document.querySelector('.navIcon')
-const header = document.querySelector('.header')
 const background = document.querySelector('.background')
 const hero = document.querySelector('.hero')
 const proyectsButton = document.querySelector('.proyects-button')
@@ -47,12 +45,6 @@ const hideProyects = () =>{
 const showProyects = () =>{
 	proyects.classList.remove('hide')
 }
-
-
-
-navBarIcon.addEventListener('click', () => {
-	header.classList.toggle('openHeader');
-})
 
 proyectsButton.addEventListener('click', () => {
 	hideHero()
