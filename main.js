@@ -65,10 +65,11 @@ proyectsButton.addEventListener('click', () => {
 })
 
 backButton.addEventListener('click', () => {
-	contentBox.scrollTo({
-		top: 0,
-		behavior: 'smooth'
-	});
+	setTimeout(()=>{
+		contentBox.scrollTo({
+			top: 0,
+		});
+	}, 400)
 	showHero()
 	hideProyects()
 })
