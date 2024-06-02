@@ -518,5 +518,5 @@ img.javascript{
 }
 
 .animate{
-	transition: opacity 0.3s ease, transform 0.4s ease;
+	transition: opacity 0.3s ease, transform 0.3s ease;
 }
