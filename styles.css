@@ -126,7 +126,6 @@ body{
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-	padding: 20px 0px;
 	gap: 30px;
 	overflow-y: scroll;
 	transition: none;
@@ -466,6 +465,14 @@ img.javascript{
 
 .proyect-card a img{
 	height: 50%;
+}
+
+.back-button{
+	margin-bottom: 40px;
+}
+
+.siman{
+	margin-top: 40px;
 }
 
 @media (max-width: 1655px) {
