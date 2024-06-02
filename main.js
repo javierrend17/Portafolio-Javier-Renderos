@@ -68,8 +68,9 @@ backButton.addEventListener('click', () => {
 	setTimeout(()=>{
 		contentBox.scrollTo({
 			top: 0,
+			
 		});
-	}, 400)
+	}, 200)
 	showHero()
 	hideProyects()
 })
