@@ -49,6 +49,7 @@ html{
 	top: 0px;
 	left: 0px;
 	z-index: -400;
+	overflow: hidden;
 }
 
 .particles-container{
@@ -111,6 +112,7 @@ body{
 	justify-content: center;
 	align-items: center;
 	color: rgb(255, 255, 255);
+	overflow: hidden;
 }
 
 .content{
@@ -143,6 +145,7 @@ body{
 	position: fixed;
 	will-change: transform;
 	will-change: opacity;
+	overflow: hidden;
 }
 
 
