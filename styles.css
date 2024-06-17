@@ -127,7 +127,7 @@ body{
 	align-items: center;
 	gap: 30px;
 	overflow-y: scroll;
-	padding-top: 40px;
+	padding: 40px 40px;
 	-webkit-overflow-scrolling: touch;
 	position: absolute;
 	top: 0;
