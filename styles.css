@@ -127,6 +127,7 @@ body{
 	align-items: center;
 	gap: 30px;
 	overflow-y: scroll;
+	padding-top: 40px;
 	-webkit-overflow-scrolling: touch;
 	position: absolute;
 	top: 0;
@@ -474,10 +475,6 @@ img.javascript{
 
 .proyect-card a img{
 	height: 50%;
-}
-
-.back-button{
-	margin-bottom: 40px;
 }
 
 .siman{
